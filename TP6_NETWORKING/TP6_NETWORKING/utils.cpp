@@ -1,6 +1,7 @@
 #include "general.h"
 #include "utils.h"
 #include <fstream>
+#include "package.h"
 #include <curses.h>
 void fill_vector(vector<string>& strin)
 {
@@ -9,12 +10,13 @@ void fill_vector(vector<string>& strin)
 	string line;
 	while (src.good()) {
 
-		getline(src, line);		strin.push_back(line);
+		getline(src, line);
+		strin.push_back(line);
 	}
 	src.close();
 }
-
-void get_user_data (userData& usr)
+/*
+void get_user_data(userData * usr, paquete * pckg)
 {
 	WINDOW * winTest = NULL;
 	winTest = initscr();
@@ -37,16 +39,18 @@ void get_user_data (userData& usr)
 			valid = 0;
 		}
 	}
-	usr.animation = i;
+	pckg->animation = (char) i;
 	printw("Ingrese el orden en el que quiere ver la animacion de a una maquina\n");
-	int lenght = usr.ips.size();
+	int lenght = usr->ips.size();
+	usr->totalIps = lenght;
 	for (int i = 0; i < lenght; i++)
 	{
 		int num;
 		cin >> num;//No estaria verificando que sea un numero valido o que no se repita tipo tengo 3 pcs y 1234 o 1223 si quieren hacerlo haganlo :)
-		usr.order.push_back(num); //el orden ahora está en un vector
+		pckg->order.push_back(num); //el orden ahora está en un vector
 		cout << "Siguiente!" << endl;
+		//Lo de aca no esta muy relacionado con lo de arriba
+		pckg->count = 1;
 	}
-
-
-}
+}*/
+//LA PORONGA DE GET USER DATA

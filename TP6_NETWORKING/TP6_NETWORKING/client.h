@@ -1,5 +1,6 @@
 #pragma once
-#include <boost/asio.hpp>
+//#include <boost/asio.hpp>
+#include "package.h"
 #include <string>
 using namespace std;
 class client
@@ -11,9 +12,9 @@ public:
 	~client();
 private:
 
-	boost::asio::io_service * io_handler;
+/*	boost::asio::io_service * io_handler;
 	boost::asio::ip::tcp::socket * client_socket;
 	boost::asio::ip::tcp::resolver * client_resolver;
 	boost::asio::ip::tcp::resolver::iterator endpoint;
-};
+*/};
 

@@ -1,5 +1,6 @@
 #pragma once
 #include <stdlib.h>
+#include "package.h"
 #include <stdio.h>
 
 typedef int(*pCallback) (char *, char*, void *);

@@ -25,7 +25,7 @@ int callback(char * key, char * PARAMETER, void * USER_DATA)
 			if (!strcmp(PARAMETER, usr->ips[i].c_str()))
 			{
 				usr->My_ip = PARAMETER; //ACA TENGO QUE FIJARME QUE LA IP ESTE EN MI LISTA ASI SE MI POCIION
-				usr->current_machine = i; //la ip que soy segun la lista;
+				usr->myPos = i; //la ip que soy segun la lista;
 				return 0;
 			}
 		}
